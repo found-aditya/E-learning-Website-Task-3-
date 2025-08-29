@@ -1,0 +1,154 @@
+[
+  {
+    "id": "js-essentials",
+    "title": "JavaScript Essentials",
+    "instructor": "A. Sharma",
+    "rating": 4.7,
+    "students": 12450,
+    "duration": "9h",
+    "level": "Beginner",
+    "price": 0,
+    "badge": "Popular",
+    "thumbnail": "assets/images/placeholder_course.svg",
+    "category": "Programming",
+    "short": "Master the basics of modern JavaScript with projects.",
+    "what_you_will_learn": [
+      "Variables, types, and modern ES modules",
+      "DOM manipulation & events",
+      "Async JS: promises, fetch, and APIs",
+      "Best practices and debugging"
+    ],
+    "syllabus": [
+      {
+        "title": "Get started & setup",
+        "lessons": 7
+      },
+      {
+        "title": "Core language",
+        "lessons": 10
+      },
+      {
+        "title": "Browser APIs",
+        "lessons": 8
+      },
+      {
+        "title": "Mini projects",
+        "lessons": 6
+      }
+    ]
+  },
+  {
+    "id": "react-pro",
+    "title": "React & Vite: Pro Workshop",
+    "instructor": "K. Verma",
+    "rating": 4.8,
+    "students": 8520,
+    "duration": "12h",
+    "level": "Intermediate",
+    "price": 1299,
+    "badge": "Bestseller",
+    "thumbnail": "assets/images/placeholder_course.svg",
+    "category": "Programming",
+    "short": "Build fast, modern SPAs with React hooks & Vite.",
+    "what_you_will_learn": [
+      "Component patterns & state management",
+      "Routing, forms, and API integration",
+      "Performance optimization",
+      "Deployments and best practices"
+    ],
+    "syllabus": [
+      {
+        "title": "React fundamentals",
+        "lessons": 9
+      },
+      {
+        "title": "Hooks deep dive",
+        "lessons": 7
+      },
+      {
+        "title": "Routing & forms",
+        "lessons": 8
+      },
+      {
+        "title": "Project & deploy",
+        "lessons": 6
+      }
+    ]
+  },
+  {
+    "id": "ui-ux",
+    "title": "UI/UX Design Foundations",
+    "instructor": "N. Khan",
+    "rating": 4.6,
+    "students": 6320,
+    "duration": "7h",
+    "level": "Beginner",
+    "price": 999,
+    "badge": "New",
+    "thumbnail": "assets/images/placeholder_course.svg",
+    "category": "Design",
+    "short": "Principles of beautiful, usable interfaces.",
+    "what_you_will_learn": [
+      "Research, personas, and journeys",
+      "Wireframes to hi-fi mockups",
+      "Accessibility essentials",
+      "Design systems 101"
+    ],
+    "syllabus": [
+      {
+        "title": "UX principles",
+        "lessons": 6
+      },
+      {
+        "title": "UI components",
+        "lessons": 9
+      },
+      {
+        "title": "Accessibility",
+        "lessons": 5
+      },
+      {
+        "title": "Case study",
+        "lessons": 5
+      }
+    ]
+  },
+  {
+    "id": "data-analytics",
+    "title": "Data Analytics with Python",
+    "instructor": "R. Iyer",
+    "rating": 4.7,
+    "students": 9410,
+    "duration": "10h",
+    "level": "Intermediate",
+    "price": 1499,
+    "badge": "Trending",
+    "thumbnail": "assets/images/placeholder_course.svg",
+    "category": "Data",
+    "short": "Analyze and visualize data using Python tools.",
+    "what_you_will_learn": [
+      "Pandas & NumPy basics",
+      "Cleaning and EDA workflows",
+      "Matplotlib plots and dashboards",
+      "Mini capstone analysis"
+    ],
+    "syllabus": [
+      {
+        "title": "Python refresher",
+        "lessons": 6
+      },
+      {
+        "title": "Pandas & NumPy",
+        "lessons": 10
+      },
+      {
+        "title": "Visualization",
+        "lessons": 8
+      },
+      {
+        "title": "Capstone",
+        "lessons": 4
+      }
+    ]
+  }
+]

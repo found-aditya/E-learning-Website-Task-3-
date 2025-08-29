@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course • EduLearn</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="./">
+      <img src="assets/images/logo.svg" alt="EduLearn logo" />
+      EduLearn
+    </a>
+    <div class="cta">
+      <button class="btn">Log in</button>
+      <button class="btn primary">Sign up</button>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding-top:24px;">
+  <div id="courseContainer"></div>
+</main>
+
+<script type="module">
+import { loadCourses } from './assets/app.js';
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const courses = await loadCourses();
+  const course = courses.find(c => c.id === id) || courses[0];
+  renderCourse(course);
+});
+
+function renderCourse(course){
+  document.title = course.title + " • EduLearn";
+  const el = document.getElementById('courseContainer');
+  el.innerHTML = `
+  <section class="banner" style="align-items:flex-start;gap:20px;">
+    <div style="flex:1 1 60%">
+      <h1 style="margin:0 0 6px;">${course.title}</h1>
+      <div class="meta"><span>${course.level}</span> • <span>${course.duration}</span> • <span>${course.rating}★</span> • <span>${course.students.toLocaleString()} learners</span></div>
+      <p style="color:var(--muted);margin:10px 0 0">${course.short}</p>
+      <div class="tags" style="margin-top:10px;">
+        ${course.what_you_will_learn.slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}
+      </div>
+      <div style="margin-top:16px;display:flex;gap:10px;">
+        <button class="btn primary" id="enrollBtn">Enroll${course.price > 0 ? ` • ₹${course.price}` : ' • Free'}</button>
+        <a class="btn" href="./">Back to courses</a>
+      </div>
+    </div>
+    <div style="flex:1 1 40%">
+      <div class="hero-illust"><img src="${course.thumbnail}" alt="${course.title} preview"/></div>
+    </div>
+  </section>
+  <section>
+    <h2>Syllabus</h2>
+    <div class="grid">
+      ${course.syllabus.map(s=>`
+        <div class="card">
+          <div class="card-body">
+            <strong>${s.title}</strong>
+            <div class="meta"><span>${s.lessons} lessons</span></div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  </section>
+  `;
+
+  document.getElementById('enrollBtn').addEventListener('click', () => {
+    const list = JSON.parse(localStorage.getItem('enrolled')||'[]');
+    if(!list.find(x=>x.id===course.id)) list.push({id:course.id,title:course.title,price:course.price});
+    localStorage.setItem('enrolled', JSON.stringify(list));
+    alert('Enrolled in ' + course.title);
+  });
+}
+</script>
+</body>
+</html>

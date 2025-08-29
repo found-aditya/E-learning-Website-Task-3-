@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduLearn - E-learning Frontend</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="./">
+      <img src="assets/images/logo.svg" alt="EduLearn logo" />
+      EduLearn
+    </a>
+    <nav class="nav-links">
+      <a href="#courses">Courses</a>
+      <a href="#categories">Categories</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="cta">
+      <button class="btn">Log in</button>
+      <button class="btn primary">Sign up</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <h1>Learn faster with project-based courses.</h1>
+      <p>High-quality lessons, modern skills, and certificates you can share. Start for free, upgrade anytime.</p>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search courses, topics, instructors..." />
+        <button id="searchBtn" class="btn primary">Search</button>
+      </div>
+      <div class="category-list" id="categoryChips"></div>
+      <div class="kpis">
+        <div class="kpi"><div class="num" id="kpiCourses">120+</div><div>Courses</div></div>
+        <div class="kpi"><div class="num">85k+</div><div>Learners</div></div>
+        <div class="kpi"><div class="num">4.7★</div><div>Avg Rating</div></div>
+        <div class="kpi"><div class="num">100%</div><div>Certificate</div></div>
+      </div>
+    </div>
+    <div class="hero-illust">
+      <img src="assets/images/hero.svg" alt="Learning illustration" />
+    </div>
+  </section>
+
+  <section class="banner" id="categories">
+    <span><strong>New:</strong> Career tracks are live — complete a path and earn a certificate.</span>
+    <div class="filters" id="levelFilters">
+      <button data-level="All" class="active">All</button>
+      <button data-level="Beginner">Beginner</button>
+      <button data-level="Intermediate">Intermediate</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title" id="courses">
+      <h2>Featured courses</h2>
+      <div class="filters" id="sortFilters">
+        <button data-sort="popular" class="active">Most Popular</button>
+        <button data-sort="rating">Top Rated</button>
+        <button data-sort="newest">Newest</button>
+        <button data-sort="price_low">Price: Low</button>
+        <button data-sort="price_high">Price: High</button>
+      </div>
+    </div>
+    <div id="coursesGrid" class="grid"></div>
+  </section>
+
+  <section class="testimonials" id="reviews">
+    <div class="quote">“The courses are crisp and hands-on. The projects helped me land an internship.” — Priya</div>
+    <div class="quote">“Clean UI and excellent instructors. Certificates look great on my profile.” — Rohan</div>
+    <div class="quote">“Learnt React in two weeks. The practice exercises are 🔥.” — Aisha</div>
+  </section>
+
+  <section class="banner" id="about">
+    <div>
+      <strong>Join EduLearn Pro</strong><br/>
+      Unlimited access to all courses, downloadable resources, and certificates.
+    </div>
+    <button class="btn primary">Get Pro</button>
+  </section>
+</main>
+
+<aside class="enrolled" aria-live="polite">
+  <h4>My learning</h4>
+  <div class="list" id="enrolledList"></div>
+</aside>
+
+<footer class="container footer">
+  <div>
+    <h4>EduLearn</h4>
+    <p>Modern, accessible learning built for busy people. Learn by doing.</p>
+  </div>
+  <div>
+    <h4>Explore</h4>
+    <a href="#courses">Courses</a>
+    <a href="#categories">Categories</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <a href="#">About</a>
+    <a href="#">Careers</a>
+    <a href="#">Contact</a>
+  </div>
+  <div>
+    <h4>Legal</h4>
+    <a href="#">Terms</a>
+    <a href="#">Privacy</a>
+  </div>
+  <div class="copy">© <span id="year"></span> EduLearn. All rights reserved.</div>
+</footer>
+
+<script src="assets/app.js" type="module"></script>
+</body>
+</html>
