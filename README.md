@@ -3,4 +3,9 @@ A user-friendly website for an e-learning platform, built to provide an engaging
 Live demo link:  https://edulearn-frontend.web.app  <br>
 Tech Used:
 - HTML, CSS, JavaScript  
-- React + Tailwind CSS  
+- React + Tailwind CSS  <br>
+Features:
+- Course listing with categories  
+- Clean and responsive dashboard UI  
+- Simple navigation (Home, Courses, About)  
+- Designed for accessibility
